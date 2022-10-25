@@ -9,7 +9,8 @@ public class Main {
             System.out.println(year + " год не високосный");
         }
     }
-//задание 2
+
+    //задание 2
     public static void getClientOs(int i, int os) {
         if (i >= 2015 && os == 0) {
             System.out.print("Скачайте обычную версию для IOS");
@@ -23,11 +24,11 @@ public class Main {
         }
 
     }
+
     //Задание 3
-    public static void deliveryCard (int deliveryDistance ) {
+    public static int deliveryCard(int deliveryDistance) {
         int deliveryDays = 1;
         if (deliveryDistance > 0 && deliveryDistance <= 20) {
-            System.out.println("Потребуется " + deliveryDays + " день");
         } else if (deliveryDistance > 20) {
             deliveryDays++;
         }
@@ -36,9 +37,12 @@ public class Main {
         }
         if (deliveryDistance > 80) {
             deliveryDays++;
-            System.out.println("Потребуется " + deliveryDays + " дня");
+
         }
+        return deliveryDays;
     }
+
+
     public static void main(String[] args) {
         int year = 400;
         countYear(year);
@@ -46,7 +50,8 @@ public class Main {
         int os = 1;
         getClientOs(i, os);
         int distance = 60;
-        deliveryCard(distance);
+        int delivery = deliveryCard(distance);
+        System.out.println("Потребуется " + delivery + " дня");
 
 
     }
